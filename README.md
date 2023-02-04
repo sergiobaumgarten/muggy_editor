@@ -1,1 +1,1 @@
-# muggy_editor
+# arte_editor

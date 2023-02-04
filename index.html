@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte Editor</title>
+    <link rel="stylesheet" href="assets/editor.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <h3 id="logText"></h3>
+    <h3 id="sizeText">? </h3>
+    <div id="arte" class="div_arte" >
+        <div class="controls">
+            <span class="material-icons">edit</span>
+        </div>
+        <div id="photo" class="div_photo draggable">
+            <img src="" alt="">
+        </div>
+    </div>
+    <input type="range" name="Size" id="sizeRange" min="25" max="200" step="0.1">
+    <input type="range" name="Rotation" id="rotationRange" min="-180" max="180" step="1">
+</body>
+<script src="assets/js/editor.js"></script>
+<script src="assets/js/resizer.js"></script>
+</html>

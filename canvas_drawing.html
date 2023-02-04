@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canvas Drawing</title>
+  <style>
+    #canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="500" height="500"></canvas>
+  <script>
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    var isDrawing = false;
+
+    canvas.addEventListener("mousedown", function(e) {
+      isDrawing = true;
+      ctx.moveTo(e.clientX, e.clientY);
+    });
+
+    canvas.addEventListener("mousemove", function(e) {
+      if (isDrawing) {
+        ctx.lineTo(e.clientX, e.clientY);
+        ctx.stroke();
+      }
+    });
+
+    canvas.addEventListener("mouseup", function() {
+      isDrawing = false;
+    });
+  </script>
+</body>
+</html>

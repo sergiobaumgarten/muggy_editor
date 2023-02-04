@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Three.js Scene</title>
+  </head>
+  <body>
+    <canvas id="renderCanvas"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"></script>
+    <script>
+        // Import Three.js library
+        import * as THREE from 'three';
+
+        // Set up scene, camera, and renderer
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+        const renderer = new THREE.WebGLRenderer();
+        const canvas = document.getElementById("renderCanvas");
+        renderer.setSize( canvas.clientWidth, canvas.clientHeight );
+        canvas.appendChild( renderer.domElement );
+        document.body.appendChild( renderer.domElement );
+
+        // Create mug geometry
+        const mugGeometry = new THREE.CylinderGeometry( 2, 2, 4, 32 );
+        const mugMaterial = new THREE.MeshPhongMaterial( { color: 0xffffff } );
+        const mug = new THREE.Mesh( mugGeometry, mugMaterial );
+
+        // Add mug to scene
+        scene.add( mug );
+
+        // Render the scene
+        function animate() {
+    renderer.render( scene, camera );
+    requestAnimationFrame( animate );
+}
+
+animate();
+
+
+    </script>
+  </body>
+</html>
