@@ -19,8 +19,9 @@ body{
 
 .div_photo{
     width: 40%;
-    height:100px;
+    height:60%;
     background-color: brown;
+    position: relative;
 }
 
 .controls{

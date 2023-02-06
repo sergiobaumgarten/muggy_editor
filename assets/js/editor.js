@@ -13,6 +13,7 @@ function heightResize(){
 heightResize();
 window.addEventListener('resize', heightResize);
 
+/*
 const draggable = document.querySelector(".draggable");
 let isDragging = false;
 let currentX;
@@ -22,15 +23,15 @@ let initialY;
 let xOffset = 0;
 let yOffset = 0;
 
-draggable.addEventListener("mousedown", dragStart);
-draggable.addEventListener("mouseup", dragEnd);
-draggable.addEventListener("mouseout", dragEnd);
-draggable.addEventListener("mousemove", drag);
+elemento.addEventListener("mousedown", dragStart);
+elemento.addEventListener("mouseup", dragEnd);
+elemento.addEventListener("mouseout", dragEnd);
+elemento.addEventListener("mousemove", drag);
 
-draggable.addEventListener("touchstart", dragStart);
-draggable.addEventListener("touchend", dragEnd);
-draggable.addEventListener("touchcancel", dragEnd);
-draggable.addEventListener("touchmove", drag);
+elemento.addEventListener("touchstart", dragStart);
+elemento.addEventListener("touchend", dragEnd);
+elemento.addEventListener("touchcancel", dragEnd);
+elemento.addEventListener("touchmove", drag);
 
 function dragStart(e) {
   initialX = e.clientX - xOffset;
@@ -51,14 +52,14 @@ function drag(e) {
     e.preventDefault();
     currentX = e.clientX - initialX;
     currentY = e.clientY - initialY;
-
     xOffset = currentX;
     yOffset = currentY;
 
-    setTranslate(currentX, currentY, draggable);
+    setTranslate(currentX, currentY, currentDeg, draggable);
   }
 }
 
-function setTranslate(xPos, yPos, el) {
-  el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+function setTranslate(xPos, yPos, deg, el) {
+  el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0) rotate(" + deg + "deg)";
 }
+*/

@@ -1,0 +1,9 @@
+1 - Colocar os controles de edição em um modal (essa é a melhor opção?)
+2 - considerar sempre o tamanho da div arte para posição e resize dos elementos filhos
+3 - cirar uma lista d eleção de elementos as serem incluídos na arte
+4 - criar uma lista das propiedades da arte (background, elementos, posição, tamanho, rotação, cor, etc)
+5 - criar uma lista de propriedades dos elementos (posição, tamanho, rotação, cor, etc)
+6 - criar um seletor de cor para os elementos
+7 - criar um seletor de cor/imagem para o background
+8 - criar um seletor de fonte para os elementos
+9 - criar um layout no figma para o editor
