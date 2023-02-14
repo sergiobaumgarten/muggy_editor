@@ -5,10 +5,8 @@ function heightResize(){
     let divHeight = rect.height;
 
     div.style.height = `${divWidth - (divWidth*0.55)}px`;
-    document.getElementById("logText").innerText = `${divWidth - (divWidth*0.55)}`;
+    document.getElementById("logText").innerText = `${Math.round(divWidth - (divWidth*0.55)), divWidth}`;
 }
-
-
 
 heightResize();
 window.addEventListener('resize', heightResize);

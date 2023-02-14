@@ -1,4 +1,7 @@
-const elemento = document.querySelector('.draggable');
+//make this code only run when is a element with class editavel
+
+const elemento = document.querySelector('.editavel');
+if(elemento){
 const resizeRange = document.getElementById('sizeRange');
 const resizeText = document.getElementById('sizeText');
 
@@ -10,8 +13,8 @@ const elX = elPosition.x;
 const elY = elPosition.y;
 
 let isDragging = false;
-let currentX;
-let currentY;
+let currentX =0;
+let currentY = 0;
 let currentDeg = 0;
 let initialX;
 let initialY;
@@ -50,6 +53,7 @@ function dragStart(e) {
     initialY = e.clientY - yOffset;
   
     isDragging = true;
+    console.log(e)
   }
   
   function dragEnd(e) {
@@ -57,6 +61,7 @@ function dragStart(e) {
     initialY = currentY;
   
     isDragging = false;
+    console.log(e)
   }
   
   function drag(e) {
@@ -69,9 +74,26 @@ function dragStart(e) {
       yOffset = currentY;
   
       setTranslate(currentX, currentY, currentDeg, elemento);
+      console.log(e)
     }
   }
   
   function setTranslate(xPos, yPos, deg, el) {
     el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0) rotate(" + deg + "deg)";
   }
+}
+elemento2 = document.querySelector('.draggable');
+  //create a function tha add class to the element on dblclick
+  function addClass(){
+    elemento2.classList.add('editavel');
+  }
+  //create a function tha remove class to the element on dblclick
+  function removeClass(){
+    elemento2.classList.remove('editavel');
+  }
+  //create a function tha toggle class to the element on dblclick
+  function toggleClass(){
+    elemento2.classList.toggle('editavel');
+  }
+
+  elemento2.addEventListener('dblclick', toggleClass);
